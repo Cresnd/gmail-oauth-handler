@@ -31,9 +31,8 @@ export default async function handler(req, res) {
     // ✅ Optional: Store tokenData.access_token and refresh_token in DB here
 
     // ✅ Redirect back to your frontend success screen
-    return res.redirect("https://www.cresnd.com/chat/connected");
+    return res.redirect("https://www.cresnd.com/chat/");
   } catch (err) {
     console.error("OAuth exchange failed:", err);
     return res.redirect("https://www.cresnd.com/chat/oauth-error?reason=exception");
   }
-}
